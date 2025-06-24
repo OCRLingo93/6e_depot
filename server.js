@@ -12,10 +12,10 @@ app.get("/webhook", (req, res) => {
   const challenge = req.query["hub.challenge"];
 
   if (mode && token && mode === "subscribe" && token === VERIFY_TOKEN) {
-    console.log("✅ Webhook vérifié !");
+    console.log(" Webhook vérifié !");
     res.status(200).send(challenge);
   } else {
-    console.log("❌ Vérification échouée.");
+    console.log(" Vérification échouée.");
     res.sendStatus(403);
   }
 });
@@ -56,5 +56,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Serveur Webhook démarré sur lesss port ${PORT}`);
+  console.log(` Serveur Webhook démarré sur lesss port ${PORT}`);
 });
