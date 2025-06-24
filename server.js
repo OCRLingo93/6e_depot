@@ -38,8 +38,6 @@ app.post("/webhook", (req, res) => {
       if (type === "image") {
         const mediaId = message.image.id;
         console.log("🖼 ID de l’image reçue :", mediaId);
-
-        // Appeler ton OCR Python ici (via API ou fonction)
       }
 
       res.sendStatus(200);
