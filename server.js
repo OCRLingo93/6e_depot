@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 app.get("/webhook", (req, res) => {
-  const VERIFY_TOKEN = process.env.VERIFY_TOKEN || "mon_token_OCRLingo";
+  const VERIFY_TOKEN = process.env.VERIFY_TOKEN
 
   const mode = req.query["hub.mode"];
   const token = req.query["hub.verify_token"];
